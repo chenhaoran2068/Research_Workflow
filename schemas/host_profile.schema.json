@@ -1,0 +1,86 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chenhaoran2068/Research_Workflow/schemas/host_profile.schema.json",
+  "title": "Host Profile",
+  "description": "Minimum host profile contract for one runtime-bound execution host.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "profile_id",
+    "host_family",
+    "host_backend",
+    "interaction_mode",
+    "model_profile",
+    "tool_policy_profile",
+    "approval_mode",
+    "capabilities"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "host_family": {
+      "type": "string",
+      "enum": [
+        "codex",
+        "claude_code",
+        "direct_runtime",
+        "other"
+      ]
+    },
+    "host_backend": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interaction_mode": {
+      "type": "string",
+      "enum": [
+        "direct_runtime",
+        "agent_assisted",
+        "hosted_backend"
+      ]
+    },
+    "model_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_policy_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_mode": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "semi_automatic",
+        "automatic",
+        "host_managed"
+      ]
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_io",
+        "shell_exec",
+        "git_ops",
+        "search"
+      ],
+      "properties": {
+        "file_io": {
+          "type": "boolean"
+        },
+        "shell_exec": {
+          "type": "boolean"
+        },
+        "git_ops": {
+          "type": "boolean"
+        },
+        "search": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -112,3 +112,15 @@ read:
 For a future architecture sketch beyond the current `v1` target, read:
 
 - `docs/future_download_and_run_blueprint.md`
+
+For the concrete shared-runtime contract that future flow packs should follow,
+read:
+
+- `docs/multi_flow_runtime_contract.md`
+
+For machine-readable contract surfaces that later implementation work can
+follow, read:
+
+- `schemas/flow_pack_contract.schema.json`
+- `schemas/host_profile.schema.json`
+- `schemas/run_record.schema.json`

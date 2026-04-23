@@ -16,6 +16,8 @@
   ],
   "workflow_docs": [
     "docs/direct_execution_readiness.md",
+    "docs/future_download_and_run_blueprint.md",
+    "docs/multi_flow_runtime_contract.md",
     "docs/workflow_overview.md",
     "docs/workflow_map.md",
     "docs/workflow_reading_order.md",
@@ -41,6 +43,15 @@
   "framework_relationship": {
     "framework_repository": "https://github.com/chenhaoran2068/Four-Layer-OCED-M-Framework",
     "relation": "workflow-facing companion repository"
+  },
+  "future_runtime_contract": {
+    "status": "defined_but_not_yet_implemented",
+    "document": "docs/multi_flow_runtime_contract.md",
+    "schemas": [
+      "schemas/flow_pack_contract.schema.json",
+      "schemas/host_profile.schema.json",
+      "schemas/run_record.schema.json"
+    ]
   },
   "claim_boundaries": [
     "not a full public runtime mirror",

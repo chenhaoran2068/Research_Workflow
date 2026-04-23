@@ -18,6 +18,7 @@ The current public-facing workflow documents under `docs/` are:
 
 - `docs/direct_execution_readiness.md`
 - `docs/future_download_and_run_blueprint.md`
+- `docs/multi_flow_runtime_contract.md`
 - `docs/workflow_overview.md`
 - `docs/workflow_map.md`
 - `docs/workflow_reading_order.md`
@@ -26,6 +27,12 @@ The current public-facing workflow documents under `docs/` are:
 - `docs/frozen_results_summary.md`
 - `docs/evidence_claim_map.md`
 - `docs/v1_readiness_review.md`
+
+The current machine-readable future-runtime contract files are:
+
+- `schemas/flow_pack_contract.schema.json`
+- `schemas/host_profile.schema.json`
+- `schemas/run_record.schema.json`
 
 ## Likely `v2` Strengthening Additions
 

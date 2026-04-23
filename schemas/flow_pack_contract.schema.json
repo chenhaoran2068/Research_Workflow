@@ -1,0 +1,112 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chenhaoran2068/Research_Workflow/schemas/flow_pack_contract.schema.json",
+  "title": "Flow Pack Contract",
+  "description": "Minimum machine-readable contract for a future standard flow pack that can be loaded by a shared runtime.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contract_version",
+    "pack_id",
+    "pack_version",
+    "pack_kind",
+    "flow_id",
+    "flow_version",
+    "entry_mode",
+    "task_schema_path",
+    "route_definition_path",
+    "policy_definition_path",
+    "supported_host_modes",
+    "claim_boundaries"
+  ],
+  "properties": {
+    "contract_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pack_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.-]+$"
+    },
+    "pack_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "pack_kind": {
+      "type": "string",
+      "enum": [
+        "workflow_pack"
+      ]
+    },
+    "flow_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "flow_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entry_mode": {
+      "type": "string",
+      "enum": [
+        "human_readable_and_runtime_loadable",
+        "runtime_loadable_only"
+      ]
+    },
+    "task_schema_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "route_definition_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_definition_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supported_host_modes": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "direct_runtime",
+          "agent_assisted",
+          "hosted_backend"
+        ]
+      }
+    },
+    "claim_boundaries": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "recommended_paths": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prompts_dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "templates_dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "examples_dir": {
+          "type": "string",
+          "minLength": 1
+        },
+        "baselines_dir": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

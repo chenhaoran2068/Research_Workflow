@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chenhaoran2068/Research_Workflow/schemas/run_record.schema.json",
+  "title": "Run Record",
+  "description": "Minimum machine-readable record for one runtime-bound workflow execution.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_type",
+    "run_id",
+    "flow_id",
+    "task_id",
+    "status",
+    "host_mode",
+    "host_backend",
+    "model_profile",
+    "tool_policy_profile",
+    "approval_mode",
+    "started_at",
+    "artifacts",
+    "disposition"
+  ],
+  "properties": {
+    "record_type": {
+      "type": "string",
+      "const": "workflow_run_record"
+    },
+    "run_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "flow_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9_-]+$"
+    },
+    "task_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "created",
+        "running",
+        "succeeded",
+        "failed",
+        "blocked",
+        "aborted"
+      ]
+    },
+    "host_mode": {
+      "type": "string",
+      "enum": [
+        "direct_runtime",
+        "agent_assisted",
+        "hosted_backend"
+      ]
+    },
+    "host_backend": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tool_policy_profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approval_mode": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "semi_automatic",
+        "automatic",
+        "host_managed"
+      ]
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finished_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "checkpoint_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "audit_log_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "disposition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "outcome",
+        "summary"
+      ],
+      "properties": {
+        "outcome": {
+          "type": "string",
+          "enum": [
+            "accepted",
+            "rejected",
+            "blocked",
+            "quarantined",
+            "failed"
+          ]
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "error_summary": {
+      "type": "string"
+    },
+    "replay_reference": {
+      "type": "string"
+    }
+  }
+}
