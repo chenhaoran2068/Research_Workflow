@@ -108,3 +108,7 @@ For the exact distinction between:
 read:
 
 - `docs/direct_execution_readiness.md`
+
+For a future architecture sketch beyond the current `v1` target, read:
+
+- `docs/future_download_and_run_blueprint.md`

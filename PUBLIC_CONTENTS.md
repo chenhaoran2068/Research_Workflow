@@ -17,6 +17,7 @@ The current public-facing top-level files are:
 The current public-facing workflow documents under `docs/` are:
 
 - `docs/direct_execution_readiness.md`
+- `docs/future_download_and_run_blueprint.md`
 - `docs/workflow_overview.md`
 - `docs/workflow_map.md`
 - `docs/workflow_reading_order.md`
