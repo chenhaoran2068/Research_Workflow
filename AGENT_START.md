@@ -53,6 +53,8 @@ Do:
   already a direct-execution system
 - use `docs/runtime_quickstart.md` when asked how the minimal runtime skeleton
   currently works
+- use `docs/agent_host_usage.md` when asked how a downloaded copy should be
+  used with `Codex CLI` or `Claude Code`
 
 Do not:
 
@@ -77,3 +79,7 @@ When explaining repository roles:
 Machine-oriented pack metadata lives in:
 
 - `pack/manifest.json`
+
+Human-facing host usage guidance lives in:
+
+- `docs/agent_host_usage.md`

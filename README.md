@@ -118,6 +118,10 @@ read:
 
 - `docs/multi_flow_runtime_contract.md`
 
+For the stable post-current-stage sequence after the current baseline, read:
+
+- `docs/next_stage_roadmap.md`
+
 For machine-readable contract surfaces that later implementation work can
 follow, read:
 
@@ -159,6 +163,7 @@ Current runtime skeleton surface:
 - `configs/host_profiles/claude_code.json`
 - `docs/runtime_quickstart.md`
 - `docs/host_modes.md`
+- `docs/agent_host_usage.md`
 
 What this means:
 

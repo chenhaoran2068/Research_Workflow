@@ -21,7 +21,9 @@ The current public-facing workflow documents under `docs/` are:
 - `docs/future_download_and_run_blueprint.md`
 - `docs/runtime_quickstart.md`
 - `docs/host_modes.md`
+- `docs/agent_host_usage.md`
 - `docs/multi_flow_runtime_contract.md`
+- `docs/next_stage_roadmap.md`
 - `docs/workflow_overview.md`
 - `docs/workflow_map.md`
 - `docs/workflow_reading_order.md`
@@ -46,6 +48,10 @@ The current runtime-skeleton files are:
 - `configs/host_profiles/codex_cli.json`
 - `configs/host_profiles/claude_code.json`
 - `scripts/validate_runtime_setup.py`
+
+The current stable forward-planning document is:
+
+- `docs/next_stage_roadmap.md`
 
 The current `Phase C` standard flow-pack starter files are:
 

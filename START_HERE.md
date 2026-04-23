@@ -16,9 +16,10 @@ If you are opening this repository for the first time, read in this order:
 12. `docs/direct_execution_readiness.md`
 13. `docs/runtime_quickstart.md`
 14. `docs/host_modes.md`
-15. `docs/frozen_results_summary.md`
-16. `docs/evidence_claim_map.md`
-17. `docs/v1_readiness_review.md`
+15. `docs/agent_host_usage.md`
+16. `docs/frozen_results_summary.md`
+17. `docs/evidence_claim_map.md`
+18. `docs/v1_readiness_review.md`
 
 That first pass should answer:
 
@@ -84,6 +85,7 @@ Read in this order:
 7. `flows/research/examples/sample_task.json`
 8. `docs/runtime_quickstart.md`
 9. `docs/host_modes.md`
+10. `docs/agent_host_usage.md`
 
 Interpretation rule:
 
