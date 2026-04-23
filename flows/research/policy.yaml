@@ -1,0 +1,32 @@
+policy_id: "research_public_phase_c_policy"
+flow_id: "research"
+policy_version: "1.0.0-phase-c-starter"
+host_binding_rule: "one_active_host_binding_per_run"
+contract_failure_behavior: "fail_closed"
+task_validation_rule: "do_not_start_when_contract_or_task_validation_fails"
+claim_boundary_rules:
+  - "do_not_claim_full_public_runtime"
+  - "do_not_claim_full_raw_evidence_archive"
+  - "do_not_claim_complete_internal_system_parity"
+supported_host_modes:
+  - "agent_assisted"
+  - "direct_runtime"
+  - "hosted_backend"
+tool_policy_profiles:
+  public_pack_bounded:
+    file_io: "bounded"
+    shell_exec: "bounded"
+    git_ops: "bounded"
+    search: "bounded"
+approval_points:
+  - "route_lock"
+  - "freeze"
+  - "pilot_disposition"
+  - "claim_release"
+blocked_conditions:
+  - "contract_break"
+  - "host_binding_ambiguity"
+  - "policy_profile_mismatch"
+interpretation_rule:
+  - "phase-c starter policy"
+  - "not a full runtime enforcement implementation"

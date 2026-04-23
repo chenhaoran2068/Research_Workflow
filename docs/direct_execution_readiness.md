@@ -112,6 +112,8 @@ What we have:
 - the host already provides tools such as file reading, editing, command
   execution, and git operations
 - the repository provides one explicit public validator
+- the repository now also exposes a starter flow policy surface at
+  `flows/research/policy.yaml`
 
 What we do **not** yet have:
 
@@ -122,7 +124,8 @@ What we do **not** yet have:
 Judgment:
 
 - host tools exist
-- pack-owned execution tooling does not yet exist
+- one starter policy surface now exists
+- pack-owned execution tooling still does not yet exist
 
 ### 4. Task Definition Format
 
@@ -134,17 +137,21 @@ What we have:
 
 - `pack/manifest.json`
 - structured repository entry and claim-boundary metadata
+- `flows/research/flow.yaml`
+- `flows/research/route.yaml`
+- `flows/research/task_schema.json`
 
 What we do **not** yet have:
 
-- no runnable workflow task schema
 - no direct execution DSL
-- no task-card format for pack-driven execution
+- no runtime loader that consumes those files end to end
+- no task-card execution path that is already live in a runtime
 
 Judgment:
 
 - we have pack metadata
-- we do not yet have an executable task definition format
+- we now also have a starter runtime-facing task-definition surface
+- we still do not yet have a live runtime execution path
 
 ### 5. State Management
 
@@ -271,6 +278,7 @@ Current `Research_Workflow` should be described as:
 
 - a host-agnostic public workflow pack
 - agent-usable in bounded form
+- carrying a first standard flow-pack starter surface under `flows/research/`
 - not yet a standalone direct-execution workflow system
 
 That is not a defect.

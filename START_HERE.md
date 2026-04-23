@@ -68,3 +68,20 @@ The next likely strengthening lane is:
 - adaptation guidance
 - richer ablation summaries
 - broader public evidence extensions
+
+## If You Are Exploring The Future Runtime-Facing Starter Layer
+
+Read in this order:
+
+1. `docs/multi_flow_runtime_contract.md`
+2. `flows/research/README.md`
+3. `flows/research/flow.yaml`
+4. `flows/research/route.yaml`
+5. `flows/research/task_schema.json`
+6. `flows/research/policy.yaml`
+7. `flows/research/examples/sample_task.json`
+
+Interpretation rule:
+
+- this is the first standard flow-pack starter layer
+- it is not yet proof that a shared runtime has already been implemented

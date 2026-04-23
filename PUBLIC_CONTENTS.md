@@ -34,6 +34,15 @@ The current machine-readable future-runtime contract files are:
 - `schemas/host_profile.schema.json`
 - `schemas/run_record.schema.json`
 
+The current `Phase C` standard flow-pack starter files are:
+
+- `flows/research/README.md`
+- `flows/research/flow.yaml`
+- `flows/research/route.yaml`
+- `flows/research/task_schema.json`
+- `flows/research/policy.yaml`
+- `flows/research/examples/sample_task.json`
+
 ## Likely `v2` Strengthening Additions
 
 The next likely strengthening additions are:

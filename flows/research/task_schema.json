@@ -1,0 +1,73 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chenhaoran2068/Research_Workflow/flows/research/task_schema.json",
+  "title": "Research Flow Task",
+  "description": "Minimum task input for the research flow starter surface.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "task_id",
+    "problem_statement",
+    "research_question",
+    "requested_route_scope",
+    "desired_output"
+  ],
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_.:-]+$"
+    },
+    "problem_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "research_question": {
+      "type": "string",
+      "minLength": 1
+    },
+    "knowledge_readiness_state": {
+      "type": "string",
+      "enum": [
+        "unclear",
+        "partial",
+        "ready"
+      ]
+    },
+    "requested_route_scope": {
+      "type": "string",
+      "enum": [
+        "question_to_route_lock",
+        "route_lock_to_pilot",
+        "pilot_to_disposition",
+        "full_public_research_route"
+      ]
+    },
+    "desired_output": {
+      "type": "string",
+      "enum": [
+        "route_guidance",
+        "reviewable_package",
+        "disposition_recommendation",
+        "analysis_package"
+      ]
+    },
+    "constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "context_artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "requires_human_review": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

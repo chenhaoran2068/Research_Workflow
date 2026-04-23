@@ -1,0 +1,19 @@
+{
+  "task_id": "demo.research.route_lock.001",
+  "problem_statement": "We need a bounded workflow path for evaluating whether a public-safe research package can move from question framing into route lock without silent workflow-governance drift.",
+  "research_question": "What route-bounded steps and controls are required before the research workflow can lawfully enter route lock for this public-safe package?",
+  "knowledge_readiness_state": "partial",
+  "requested_route_scope": "question_to_route_lock",
+  "desired_output": "route_guidance",
+  "constraints": [
+    "Use public repository materials as the source of truth.",
+    "Do not infer unpublished local runtime details.",
+    "Keep the package claim-safe for public release."
+  ],
+  "context_artifacts": [
+    "docs/workflow_overview.md",
+    "docs/workflow_map.md",
+    "docs/multi_flow_runtime_contract.md"
+  ],
+  "requires_human_review": true
+}

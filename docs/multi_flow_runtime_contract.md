@@ -296,12 +296,29 @@ What this round adds:
 
 ### Phase C: First Standard Pack Upgrade
 
-What should be added later:
+Initial `Phase C` starter files are now present in this repository under:
 
 - `flows/research/flow.yaml`
 - `flows/research/route.yaml`
 - `flows/research/task_schema.json`
 - `flows/research/policy.yaml`
+
+What those starter files mean:
+
+- the first standard flow-pack starter surface now exists
+- `Research_Workflow` can now be used as the first contract-facing pack sample
+
+What they do **not** mean:
+
+- a shared runtime already exists
+- runtime loading is already implemented
+- execution validation is already complete
+
+Next later strengthening for this phase still includes:
+
+- stronger schema-linked validation
+- runtime loading against these files
+- run-record emission from real executions
 
 ### Phase D: Shared Runtime Skeleton
 

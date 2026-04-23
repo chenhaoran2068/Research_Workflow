@@ -124,3 +124,23 @@ follow, read:
 - `schemas/flow_pack_contract.schema.json`
 - `schemas/host_profile.schema.json`
 - `schemas/run_record.schema.json`
+
+## Phase C Starter Surface
+
+The repository now also contains the first standard flow-pack starter surface
+for the `research` flow under:
+
+- `flows/research/README.md`
+- `flows/research/flow.yaml`
+- `flows/research/route.yaml`
+- `flows/research/task_schema.json`
+- `flows/research/policy.yaml`
+
+This means:
+
+- the first contract-facing flow definition layer is now present
+
+It does **not** mean:
+
+- a full shared runtime already exists
+- a full direct-execution engine is already implemented

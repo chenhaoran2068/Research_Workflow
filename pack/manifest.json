@@ -45,13 +45,24 @@
     "relation": "workflow-facing companion repository"
   },
   "future_runtime_contract": {
-    "status": "defined_but_not_yet_implemented",
+    "status": "phase_c_starter_surface_present",
     "document": "docs/multi_flow_runtime_contract.md",
     "schemas": [
       "schemas/flow_pack_contract.schema.json",
       "schemas/host_profile.schema.json",
       "schemas/run_record.schema.json"
     ]
+  },
+  "phase_c_standard_flow_pack": {
+    "flow_id": "research",
+    "status": "starter_files_present_but_runtime_not_yet_implemented",
+    "files": [
+      "flows/research/flow.yaml",
+      "flows/research/route.yaml",
+      "flows/research/task_schema.json",
+      "flows/research/policy.yaml"
+    ],
+    "sample_task": "flows/research/examples/sample_task.json"
   },
   "claim_boundaries": [
     "not a full public runtime mirror",
