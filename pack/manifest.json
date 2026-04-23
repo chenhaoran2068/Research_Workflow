@@ -1,0 +1,50 @@
+{
+  "pack_name": "Research_Workflow",
+  "pack_kind": "public_workflow_pack",
+  "version": "1.0.0",
+  "status": "v1_ready_first_public_pack_release",
+  "entry_files": [
+    "README.md",
+    "START_HERE.md",
+    "REPOSITORY_SCOPE.md",
+    "PUBLIC_STATUS.md",
+    "PUBLIC_BOUNDARY.md",
+    "PUBLIC_CONTENTS.md",
+    "RELATIONSHIP_TO_FRAMEWORK.md",
+    "VALIDATION.md",
+    "AGENT_START.md"
+  ],
+  "workflow_docs": [
+    "docs/workflow_overview.md",
+    "docs/workflow_map.md",
+    "docs/workflow_reading_order.md",
+    "docs/public_registry_slice.md",
+    "docs/public_mechanism_map.md",
+    "docs/frozen_results_summary.md",
+    "docs/evidence_claim_map.md",
+    "docs/v1_readiness_review.md"
+  ],
+  "validation": {
+    "command": "python scripts/validate_public_bundle.py --json",
+    "guide": "VALIDATION.md",
+    "expected_typed_outcome": "PASS"
+  },
+  "agent_entry": {
+    "file": "AGENT_START.md",
+    "mode": "bounded_documentation_and_validation_first"
+  },
+  "evidence": {
+    "summary": "docs/frozen_results_summary.md",
+    "claim_map": "docs/evidence_claim_map.md"
+  },
+  "framework_relationship": {
+    "framework_repository": "https://github.com/chenhaoran2068/Four-Layer-OCED-M-Framework",
+    "relation": "workflow-facing companion repository"
+  },
+  "claim_boundaries": [
+    "not a full public runtime mirror",
+    "not a full raw evidence archive",
+    "not the full paper workspace",
+    "not one separately deployed executable unit per coordinate"
+  ]
+}
