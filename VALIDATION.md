@@ -47,3 +47,23 @@ This command does **not**:
 - validate unpublished local artifacts
 
 That boundary is intentional.
+
+## Runtime Skeleton Validation Command
+
+The repository also now provides a second validation command for the minimal
+runtime skeleton:
+
+```powershell
+python scripts/validate_runtime_setup.py --json
+```
+
+This second command checks:
+
+- runtime skeleton files exist
+- the `research` flow contract can be loaded
+- the sample task validates
+- the sample host profile validates
+- a dry run emits a valid run record
+
+This still does **not** claim that the full internal research runtime is
+publicly executed here.

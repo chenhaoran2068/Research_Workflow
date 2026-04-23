@@ -35,6 +35,12 @@ python scripts/validate_public_bundle.py --json
 
 Run that command before making stronger repository-shape claims.
 
+The runtime-skeleton validation command is:
+
+```powershell
+python scripts/validate_runtime_setup.py --json
+```
+
 ## Agent Boundaries
 
 Do:
@@ -45,6 +51,8 @@ Do:
   the repository says otherwise
 - use `docs/direct_execution_readiness.md` when asked whether this repository is
   already a direct-execution system
+- use `docs/runtime_quickstart.md` when asked how the minimal runtime skeleton
+  currently works
 
 Do not:
 
@@ -55,6 +63,7 @@ Do not:
 - do not collapse this repository and the framework repository into one claim
 - do not describe this repository as a standalone workflow engine unless a real
   execution runtime has been added
+- do not confuse the minimal runtime skeleton with a large autonomous engine
 
 ## Relationship Rule
 

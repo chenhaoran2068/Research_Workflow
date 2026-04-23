@@ -14,9 +14,11 @@ If you are opening this repository for the first time, read in this order:
 10. `VALIDATION.md`
 11. `AGENT_START.md`
 12. `docs/direct_execution_readiness.md`
-13. `docs/frozen_results_summary.md`
-14. `docs/evidence_claim_map.md`
-15. `docs/v1_readiness_review.md`
+13. `docs/runtime_quickstart.md`
+14. `docs/host_modes.md`
+15. `docs/frozen_results_summary.md`
+16. `docs/evidence_claim_map.md`
+17. `docs/v1_readiness_review.md`
 
 That first pass should answer:
 
@@ -80,8 +82,11 @@ Read in this order:
 5. `flows/research/task_schema.json`
 6. `flows/research/policy.yaml`
 7. `flows/research/examples/sample_task.json`
+8. `docs/runtime_quickstart.md`
+9. `docs/host_modes.md`
 
 Interpretation rule:
 
 - this is the first standard flow-pack starter layer
-- it is not yet proof that a shared runtime has already been implemented
+- plus a minimal runtime skeleton
+- but it is still not proof that a large autonomous runtime has already been implemented

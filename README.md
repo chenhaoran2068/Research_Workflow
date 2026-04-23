@@ -144,3 +144,31 @@ It does **not** mean:
 
 - a full shared runtime already exists
 - a full direct-execution engine is already implemented
+
+## Current Stage Completion Surface
+
+The repository now also contains a minimal shared runtime skeleton.
+
+Current runtime skeleton surface:
+
+- `runtime/__main__.py`
+- `runtime/cli.py`
+- `runtime/loader.py`
+- `runtime/runner.py`
+- `configs/host_profiles/codex_cli.json`
+- `configs/host_profiles/claude_code.json`
+- `docs/runtime_quickstart.md`
+- `docs/host_modes.md`
+
+What this means:
+
+- the repository can now complete a minimal loop of:
+  - load flow
+  - validate task
+  - bind host profile
+  - emit run record
+
+What this does **not** mean:
+
+- a large autonomous workflow engine is already public
+- the full research workflow is already auto-advanced end to end

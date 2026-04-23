@@ -67,39 +67,41 @@ What we have:
 - `AGENT_START.md`
 - `VALIDATION.md`
 - `scripts/validate_public_bundle.py`
+- `runtime/__main__.py`
+- `runtime/cli.py`
 
 What we do **not** yet have:
 
-- no workflow-run CLI such as `run_research_workflow.py`
 - no API server
-- no `main.py` that executes workflow tasks
+- no full workflow runner that advances the whole research route automatically
 
 Judgment:
 
-- we have a validation entrypoint
-- we do not yet have a workflow-execution entrypoint
+- we now have a minimal workflow-execution entrypoint
+- we still do not yet have a full autonomous workflow engine
 
 ### 2. Explicit Agent Runtime
 
 Current status:
 
-- `no`, at pack-owned runtime level
+- `partial`
 
 What we have:
 
 - the host runtime is provided by `Codex CLI` or `Claude Code`
 - the repository gives bounded entry instructions for that host
+- the repository now also provides a minimal pack-owned runtime skeleton
 
 What we do **not** yet have:
 
-- no pack-owned loop
-- no pack-owned state machine executor
-- no pack-owned graph runtime
+- no full pack-owned state machine executor
+- no graph runtime
+- no large multi-stage workflow controller
 
 Judgment:
 
-- current `v1` depends on the host runtime
-- it does not ship its own runtime engine
+- current `v1` still depends heavily on the host runtime for real work
+- but it now also ships a minimal shared runtime skeleton
 
 ### 3. Tooling Layer
 
@@ -114,6 +116,7 @@ What we have:
 - the repository provides one explicit public validator
 - the repository now also exposes a starter flow policy surface at
   `flows/research/policy.yaml`
+- the minimal runtime checks host-mode and tool-policy compatibility
 
 What we do **not** yet have:
 
@@ -140,18 +143,20 @@ What we have:
 - `flows/research/flow.yaml`
 - `flows/research/route.yaml`
 - `flows/research/task_schema.json`
+- sample host-profile contracts under `configs/host_profiles/`
 
 What we do **not** yet have:
 
 - no direct execution DSL
-- no runtime loader that consumes those files end to end
-- no task-card execution path that is already live in a runtime
+- no richer execution DSL beyond the current starter surfaces
+- no large task-card execution path that advances the full workflow end to end
 
 Judgment:
 
 - we have pack metadata
 - we now also have a starter runtime-facing task-definition surface
-- we still do not yet have a live runtime execution path
+- and we now have a minimal live runtime execution path
+- but it is still intentionally small
 
 ### 5. State Management
 
@@ -165,6 +170,7 @@ What we have:
 - frozen evidence summaries
 - manifest metadata
 - explicit artifact-oriented reading and validation surfaces
+- run-record emission from the minimal runtime skeleton
 
 What we do **not** yet have:
 
@@ -176,18 +182,23 @@ What we do **not** yet have:
 Judgment:
 
 - we have documentation and artifact state
-- we do not yet have runtime state management
+- and we now have minimal run-record state emission
+- we do not yet have fuller runtime state management
 
 ### 6. Automatic Execution Chain
 
 Current status:
 
-- `no`, except validation
+- `partial`
 
 What we have:
 
 - one automatic public validation chain:
   `python scripts/validate_public_bundle.py --json`
+- one automatic runtime-skeleton validation chain:
+  `python scripts/validate_runtime_setup.py --json`
+- one minimal runtime dry-run chain:
+  `python -m runtime run --flow research --task ... --host-profile ...`
 
 What we do **not** yet have:
 
@@ -198,7 +209,8 @@ What we do **not** yet have:
 Judgment:
 
 - the repository can validate itself
-- it cannot yet execute the workflow automatically
+- it can now execute a minimal runtime dry-run loop
+- it still cannot auto-advance the full workflow automatically
 
 ## Short Answer
 
@@ -279,6 +291,7 @@ Current `Research_Workflow` should be described as:
 - a host-agnostic public workflow pack
 - agent-usable in bounded form
 - carrying a first standard flow-pack starter surface under `flows/research/`
+- carrying a minimal shared runtime skeleton
 - not yet a standalone direct-execution workflow system
 
 That is not a defect.

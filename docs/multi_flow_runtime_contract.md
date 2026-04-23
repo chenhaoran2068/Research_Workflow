@@ -322,13 +322,27 @@ Next later strengthening for this phase still includes:
 
 ### Phase D: Shared Runtime Skeleton
 
-What should be added after that:
+The initial `Phase D` minimal skeleton is now present through:
 
-- runtime loader
-- pack validator
-- host profile loader
-- run record emitter
-- smoke-run entrypoint
+- `runtime/loader.py`
+- `runtime/runner.py`
+- `runtime/cli.py`
+- `configs/host_profiles/codex_cli.json`
+- `configs/host_profiles/claude_code.json`
+- `scripts/validate_runtime_setup.py`
+
+What this currently means:
+
+- one flow can be loaded
+- one task can be validated
+- one host profile can be bound
+- one run record can be emitted
+
+What this still does **not** mean:
+
+- the full research workflow is auto-advanced end to end
+- a large autonomous runtime is already complete
+- multi-flow runtime loading has already been proven with a second flow
 
 ### Phase E: Multi-Flow Expansion
 

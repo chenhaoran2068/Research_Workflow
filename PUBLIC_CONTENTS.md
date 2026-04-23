@@ -13,11 +13,14 @@ The current public-facing top-level files are:
 - `RELATIONSHIP_TO_FRAMEWORK.md`
 - `VALIDATION.md`
 - `AGENT_START.md`
+- `requirements.txt`
 
 The current public-facing workflow documents under `docs/` are:
 
 - `docs/direct_execution_readiness.md`
 - `docs/future_download_and_run_blueprint.md`
+- `docs/runtime_quickstart.md`
+- `docs/host_modes.md`
 - `docs/multi_flow_runtime_contract.md`
 - `docs/workflow_overview.md`
 - `docs/workflow_map.md`
@@ -33,6 +36,16 @@ The current machine-readable future-runtime contract files are:
 - `schemas/flow_pack_contract.schema.json`
 - `schemas/host_profile.schema.json`
 - `schemas/run_record.schema.json`
+
+The current runtime-skeleton files are:
+
+- `runtime/__main__.py`
+- `runtime/cli.py`
+- `runtime/loader.py`
+- `runtime/runner.py`
+- `configs/host_profiles/codex_cli.json`
+- `configs/host_profiles/claude_code.json`
+- `scripts/validate_runtime_setup.py`
 
 The current `Phase C` standard flow-pack starter files are:
 

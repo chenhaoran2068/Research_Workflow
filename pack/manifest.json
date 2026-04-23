@@ -17,6 +17,8 @@
   "workflow_docs": [
     "docs/direct_execution_readiness.md",
     "docs/future_download_and_run_blueprint.md",
+    "docs/runtime_quickstart.md",
+    "docs/host_modes.md",
     "docs/multi_flow_runtime_contract.md",
     "docs/workflow_overview.md",
     "docs/workflow_map.md",
@@ -45,7 +47,7 @@
     "relation": "workflow-facing companion repository"
   },
   "future_runtime_contract": {
-    "status": "phase_c_starter_surface_present",
+    "status": "phase_d_minimal_runtime_skeleton_present",
     "document": "docs/multi_flow_runtime_contract.md",
     "schemas": [
       "schemas/flow_pack_contract.schema.json",
@@ -55,7 +57,7 @@
   },
   "phase_c_standard_flow_pack": {
     "flow_id": "research",
-    "status": "starter_files_present_but_runtime_not_yet_implemented",
+    "status": "starter_files_present",
     "files": [
       "flows/research/flow.yaml",
       "flows/research/route.yaml",
@@ -63,6 +65,15 @@
       "flows/research/policy.yaml"
     ],
     "sample_task": "flows/research/examples/sample_task.json"
+  },
+  "runtime_skeleton": {
+    "status": "minimal_shared_runtime_present",
+    "entrypoint": "python -m runtime run",
+    "validation_command": "python scripts/validate_runtime_setup.py --json",
+    "host_profiles": [
+      "configs/host_profiles/codex_cli.json",
+      "configs/host_profiles/claude_code.json"
+    ]
   },
   "claim_boundaries": [
     "not a full public runtime mirror",

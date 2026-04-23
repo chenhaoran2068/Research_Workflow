@@ -1,0 +1,15 @@
+{
+  "profile_id": "claude_code_public_pack",
+  "host_family": "claude_code",
+  "host_backend": "claude_code",
+  "interaction_mode": "agent_assisted",
+  "model_profile": "host_managed",
+  "tool_policy_profile": "public_pack_bounded",
+  "approval_mode": "host_managed",
+  "capabilities": {
+    "file_io": true,
+    "shell_exec": true,
+    "git_ops": true,
+    "search": true
+  }
+}
