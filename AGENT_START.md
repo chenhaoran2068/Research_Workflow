@@ -21,8 +21,9 @@ Read in this order:
 8. `docs/workflow_map.md`
 9. `docs/public_registry_slice.md`
 10. `docs/public_mechanism_map.md`
-11. `docs/frozen_results_summary.md`
-12. `docs/evidence_claim_map.md`
+11. `docs/direct_execution_readiness.md`
+12. `docs/frozen_results_summary.md`
+13. `docs/evidence_claim_map.md`
 
 ## Validation Command
 
@@ -42,6 +43,8 @@ Do:
 - use repository-provided files as the source of truth
 - treat missing local-only materials as intentionally out of public scope unless
   the repository says otherwise
+- use `docs/direct_execution_readiness.md` when asked whether this repository is
+  already a direct-execution system
 
 Do not:
 
@@ -50,6 +53,8 @@ Do not:
 - do not infer unpublished local runtime structure from omissions
 - do not claim one separately deployed executable unit per coordinate
 - do not collapse this repository and the framework repository into one claim
+- do not describe this repository as a standalone workflow engine unless a real
+  execution runtime has been added
 
 ## Relationship Rule
 

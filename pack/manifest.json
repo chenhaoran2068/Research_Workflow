@@ -15,6 +15,7 @@
     "AGENT_START.md"
   ],
   "workflow_docs": [
+    "docs/direct_execution_readiness.md",
     "docs/workflow_overview.md",
     "docs/workflow_map.md",
     "docs/workflow_reading_order.md",
@@ -45,6 +46,7 @@
     "not a full public runtime mirror",
     "not a full raw evidence archive",
     "not the full paper workspace",
-    "not one separately deployed executable unit per coordinate"
+    "not one separately deployed executable unit per coordinate",
+    "not yet a standalone direct-execution workflow engine"
   ]
 }

@@ -86,6 +86,7 @@ Start here:
 3. `PUBLIC_STATUS.md`
 4. `PUBLIC_BOUNDARY.md`
 5. `RELATIONSHIP_TO_FRAMEWORK.md`
+6. `docs/direct_execution_readiness.md`
 
 ## v1 Target
 
@@ -96,3 +97,14 @@ Start here:
 - bounded `agent-assisted use`
 
 It is **not** intended to be a first-release full deployment mirror.
+
+It is also **not** yet a standalone direct-execution workflow engine.
+
+For the exact distinction between:
+
+- an agent-usable workflow pack
+- and a direct-execution system
+
+read:
+
+- `docs/direct_execution_readiness.md`

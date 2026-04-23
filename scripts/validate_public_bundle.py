@@ -19,6 +19,7 @@ REQUIRED_FILES = [
     "VALIDATION.md",
     "AGENT_START.md",
     "pack/manifest.json",
+    "docs/direct_execution_readiness.md",
     "docs/workflow_overview.md",
     "docs/workflow_map.md",
     "docs/workflow_reading_order.md",
@@ -53,6 +54,10 @@ TEXT_CHECKS = {
     "AGENT_START.md": [
         "python scripts/validate_public_bundle.py --json",
         "do not claim",
+    ],
+    "docs/direct_execution_readiness.md": [
+        "agent-usable public workflow pack",
+        "direct-execution system",
     ],
     "docs/frozen_results_summary.md": [
         "exp_base_01_2026-04-22T121910Z",

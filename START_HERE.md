@@ -13,9 +13,10 @@ If you are opening this repository for the first time, read in this order:
 9. `docs/public_mechanism_map.md`
 10. `VALIDATION.md`
 11. `AGENT_START.md`
-12. `docs/frozen_results_summary.md`
-13. `docs/evidence_claim_map.md`
-14. `docs/v1_readiness_review.md`
+12. `docs/direct_execution_readiness.md`
+13. `docs/frozen_results_summary.md`
+14. `docs/evidence_claim_map.md`
+15. `docs/v1_readiness_review.md`
 
 That first pass should answer:
 
@@ -57,6 +58,8 @@ Agent rule for the current stage:
 - begin from the files listed above
 - use `AGENT_START.md` and `pack/manifest.json`
 - do not infer unpublished local runtime structure from public omissions
+- use `docs/direct_execution_readiness.md` if you need the current execution
+  boundary
 
 ## Next Likely Strengthening Lane
 

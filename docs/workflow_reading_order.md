@@ -61,13 +61,15 @@ Read these next:
 
 1. `VALIDATION.md`
 2. `AGENT_START.md`
-3. `docs/frozen_results_summary.md`
-4. `docs/evidence_claim_map.md`
+3. `docs/direct_execution_readiness.md`
+4. `docs/frozen_results_summary.md`
+5. `docs/evidence_claim_map.md`
 
 Goal of this pass:
 
 - validate the bundle
 - begin bounded agent-assisted use
+- understand the current execution boundary
 - inspect the compact frozen evidence layer
 
 ## Fifth Pass: Readiness Decision
